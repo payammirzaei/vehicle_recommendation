@@ -1,0 +1,11 @@
+vehicle_id,price,type,fuel,engine_capacity,transmission,seats,mileage,brand
+1,20000,SUV,Petrol,2.0,Automatic,5,15.0,Toyota
+2,15000,Sedan,Diesel,1.5,Manual,5,20.0,Honda
+3,10000,Hatchback,Petrol,1.2,Manual,5,22.0,Hyundai
+4,30000,SUV,Diesel,2.5,Automatic,7,12.0,Ford
+5,12000,Hatchback,Petrol,1.0,Manual,4,25.0,Suzuki
+6,25000,Sedan,Diesel,2.0,Automatic,5,18.0,BMW
+7,18000,SUV,Petrol,2.0,Manual,5,14.0,Toyota
+8,14000,Sedan,Petrol,1.8,Automatic,5,17.0,Honda
+9,16000,Hatchback,Diesel,1.5,Manual,5,21.0,Hyundai
+10,28000,SUV,Diesel,2.2,Automatic,7,13.0,Ford

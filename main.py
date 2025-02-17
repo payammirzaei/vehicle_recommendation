@@ -27,3 +27,5 @@ try:
     print(recommended_vehicle)
 except ValueError as e:
     print(f"Error: {e}")
+
+print(df.head())  

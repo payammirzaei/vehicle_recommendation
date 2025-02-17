@@ -29,3 +29,5 @@ except ValueError as e:
     print(f"Error: {e}")
 
 print(df.head())  
+print("Sample Predictions:")
+print(model.predict(X_test[:5])) 

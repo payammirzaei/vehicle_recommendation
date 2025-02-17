@@ -8,42 +8,25 @@ pipeline {
             }
         }
 
-        stage('Set Up Virtual Environment') {
+        stage('Build Docker Image') {
             steps {
-                sh '''
-                python3 -m venv venv
-                source venv/bin/activate
-                pip install --upgrade pip
-                pip install -r requirements.txt
-                '''
+                sh 'docker build -t vehicle-recommendation .'
             }
         }
 
-        stage('Run Tests') {
+        stage('Run Docker Container') {
             steps {
-                sh '''
-                source venv/bin/activate
-                pytest tests/ || echo "No tests found, skipping..."
-                '''
-            }
-        }
-
-        stage('Run ML Model') {
-            steps {
-                sh '''
-                source venv/bin/activate
-                python3 main.py
-                '''
+                sh 'docker run --rm vehicle-recommendation'
             }
         }
     }
 
     post {
         success {
-            echo 'Machine Learning Model Executed Successfully! ✅'
+            echo 'Docker Container Built and Ran Successfully! ✅'
         }
         failure {
-            echo 'Build or tests failed. ❌'
+            echo 'Build or execution failed. ❌'
         }
     }
 }

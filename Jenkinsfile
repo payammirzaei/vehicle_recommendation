@@ -14,7 +14,7 @@ pipeline {
             }
         }
 
-        stage('Run Docker Container') {
+        stage('Run Tests in Docker') {
             steps {
                 sh 'docker run --rm vehicle-recommendation'
             }
@@ -23,10 +23,10 @@ pipeline {
 
     post {
         success {
-            echo 'Docker Container Built and Ran Successfully! ✅'
+            echo '✅ Build and Test Successful!'
         }
         failure {
-            echo 'Build or execution failed. ❌'
+            echo '❌ Build or Tests Failed!'
         }
     }
 }

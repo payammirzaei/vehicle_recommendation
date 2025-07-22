@@ -13,3 +13,4 @@ A simple machine learning-based recommendation system for vehicles based on user
 1. Install dependencies:
    ```bash
    pip install -r requirements.txt
+2. python main.py
